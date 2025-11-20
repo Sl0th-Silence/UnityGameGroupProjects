@@ -15,8 +15,19 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    //ground check boolean for animations
+    private bool isGrounded = false;
     void Update()
     {
+        // if (isGrounded)
+        // {
+        //     Debug.Log("GROUNDED");
+        // }
+        // if (!isGrounded)
+        // {
+        //     Debug.Log("NOT GROUNDED");
+        // }
+        
         // --- Horizontal movement ---
         // Get input from keyboard (A/D or Left/Right arrows).
         float moveInput = Input.GetAxis("Horizontal");
@@ -38,7 +49,20 @@ public class PlayerController : MonoBehaviour
     // starts counting up if the player is on the ground
     void OnTriggerStay2D(Collider2D collision)
     {
-        //Debug.Log("TIMER: " + timer);
-        timer += Time.deltaTime;
+        if(collision.gameObject.layer == 3)
+        {
+            //Debug.Log("TIMER: " + timer);
+            timer += Time.deltaTime;
+            isGrounded = true;
+        }        
+        //Debug.Log(timer);
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == 3)
+        {
+            isGrounded = false;
+        }
     }
 }
