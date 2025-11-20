@@ -5,9 +5,16 @@ public class PlayerController : MonoBehaviour
 {
     // Public variables appear in the Inspector, so you can tweak them without editing code.
     public float moveSpeed = 4f;       // How fast the player moves left/right
+    public float jumpForce = 4f;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
 
     // Private variables are used internally by the script.
-    private Rigidbody2D rb;            // Reference to the Rigidbody2D component
+    private Rigidbody2D rb;      // Reference to the Rigidbody2D component
+    
+    //Bool for ground check
+    private bool isGrounded;
     private float timer = 0.0f;
     void Start()
     {
@@ -15,8 +22,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    //ground check boolean for animations
-    private bool isGrounded = false;
     void Update()
     {
         // if (isGrounded)
@@ -33,36 +38,19 @@ public class PlayerController : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
         // Apply horizontal speed while keeping the current vertical velocity.
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-        if(timer >= 0.65f)
+        //Debug.Log("TIMER DONE");
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            //Debug.Log("TIMER DONE");
-            if (Input.GetKeyDown("space"))
-            {
-                rb.linearVelocityY = 6.5f;
-                //Debug.Log("JUMPED");
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
+            //Debug.Log("JUMPED");
 
-                timer = 0f;
-            }
+            timer = 0f;
         }
     }
 
-    // starts counting up if the player is on the ground
-    void OnTriggerStay2D(Collider2D collision)
+    private void FixedUpdate()
     {
-        if(collision.gameObject.layer == 3)
-        {
-            //Debug.Log("TIMER: " + timer);
-            timer += Time.deltaTime;
-            isGrounded = true;
-        }        
-        //Debug.Log(timer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.layer == 3)
-        {
-            isGrounded = false;
-        }
-    }
 }
