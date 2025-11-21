@@ -10,12 +10,20 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
+    //SFX sources
+    public AudioSource audioPlayer;
+    public AudioClip walk;
+    public AudioClip jumpGRND;
+    public AudioClip jumpAIR;
+
     // Private variables are used internally by the script.
     private Rigidbody2D rb;      // Reference to the Rigidbody2D component
     
     //Bool for ground check
     private bool isGrounded;
+    private bool doubleJump;
     private float timer = 0.0f;
+    private float SFXTimer = 0.0f;
     private Animator animator; // Reference to Animator component
     void Start()
     {
@@ -37,6 +45,16 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
 
             timer = 0f;
+
+            audioPlayer.PlayOneShot(jumpGRND);
+        }
+        //if the player is pressing space & can double jump & is not on the ground
+        else if(Input.GetKeyDown(KeyCode.Space) && doubleJump && !isGrounded)
+        {
+            //the double jump will be half the force of the normal jump
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce / 1.5f);
+            doubleJump = false;
+            audioPlayer.PlayOneShot(jumpAIR);
         }
         setAnimation(moveInput);//Call setAnimation function every frame to check which animations should be played
     }
@@ -44,6 +62,12 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        
+        //if the player is touching the ground, we can allow them to double jump
+        if (isGrounded)
+        {
+            doubleJump = true;
+        }
     }
 
     private void setAnimation(float moveInput)
@@ -57,6 +81,16 @@ public class PlayerController : MonoBehaviour
             else
             {
                 animator.Play("player_run"); // Otherwise play run animation
+                if(SFXTimer > 0.2586f)
+                {
+                    audioPlayer.PlayOneShot(walk);
+                    SFXTimer = 0.0f;
+                }
+                else
+                {
+                    SFXTimer += Time.deltaTime;
+                }
+                
             }
         }
         else //If player is not touching the ground
