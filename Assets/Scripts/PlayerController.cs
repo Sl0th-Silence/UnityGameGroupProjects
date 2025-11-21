@@ -16,10 +16,12 @@ public class PlayerController : MonoBehaviour
     //Bool for ground check
     private bool isGrounded;
     private float timer = 0.0f;
+    private Animator animator; // Reference to Animator component
     void Start()
     {
         // Grab the Rigidbody2D attached to the Player object once at the start.
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -46,11 +48,38 @@ public class PlayerController : MonoBehaviour
 
             timer = 0f;
         }
+        setAnimation(moveInput);//Call setAnimation function every frame to check which animations should be played
     }
 
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+
+    private void setAnimation(float moveInput)
+    {
+        if(isGrounded) //If player is touching the ground
+        {
+            if(moveInput==0) //If player is not moving, play idle animation
+            {
+                animator.Play("player_idle");
+            }
+            else
+            {
+                animator.Play("player_run"); // Otherwise play run animation
+            }
+        }
+        else //If player is not touching the ground
+        {
+            if(rb.linearVelocity.y > 0) // If player is moving at upward velocity play jump animation
+            {
+                animator.Play("player_jump");
+            }
+            else
+            {
+                animator.Play("player_fall"); // Otherwise play fall animation
+            }
+        }
     }
 
 }
