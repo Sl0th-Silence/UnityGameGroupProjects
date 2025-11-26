@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8522345427709322192}
   - component: {fileID: 1862489729804004406}
   - component: {fileID: 3018315903046414196}
+  - component: {fileID: 5433342068061208807}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -311,6 +312,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5433342068061208807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150758206926941950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340f051d983ed6447a7249c7db51b7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  audioPlayer: {fileID: 3018315903046414196}
+  dmgSFX: {fileID: 8300000, guid: eff25594dd7da0b46bd74b9e4576190c, type: 3}
+  deathSFX: {fileID: 8300000, guid: 9a31401f559164c42b4370933398a70c, type: 3}
+  deathHitSFX: {fileID: 8300000, guid: 74f486cae43b47e4f997746da4123ecb, type: 3}
+  health: 100
+  damageAmount: 25
 --- !u!1 &5440198274507659869
 GameObject:
   m_ObjectHideFlags: 0
