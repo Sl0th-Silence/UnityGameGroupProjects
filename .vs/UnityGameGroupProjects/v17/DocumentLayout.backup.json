@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{22A8A5FD-C04D-50AD-38AE-41FC48909895}|Assembly-CSharp.csproj|c:\\users\\jay_m\\desktop\\semester3\\unitygroupproject\\unitygamegroupprojects\\unitygamegroupprojects\\assets\\scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22A8A5FD-C04D-50AD-38AE-41FC48909895}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{22A8A5FD-C04D-50AD-38AE-41FC48909895}|Assembly-CSharp.csproj|c:\\users\\jay_m\\desktop\\semester3\\unitygroupproject\\unitygamegroupprojects\\unitygamegroupprojects\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{22A8A5FD-C04D-50AD-38AE-41FC48909895}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,12 +35,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerHealth.cs",
+              "ToolTip": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerHealth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T19:37:18.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwCQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T23:04:53.14Z",
               "EditorCaption": ""
