@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip dmgSFX;
     public AudioClip deathSFX;
     public AudioClip deathHitSFX;
+
+    //Healthbar Image
+    public Image healthImage;
 
 
     // Starting health value for the Player
@@ -24,6 +28,13 @@ public class PlayerHealth : MonoBehaviour
     {
         // Get the SpriteRenderer component attached to the Player
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    //======== Update ========//
+
+    void Update()
+    {
+        healthImage.fillAmount = health/100f;
     }
 
     // Method to reduce health when damage is taken
