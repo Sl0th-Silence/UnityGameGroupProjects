@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|c:\\users\\ohara\\onedrive\\documents\\github\\localrepogamedev\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|c:\\users\\ohara\\onedrive\\documents\\github\\localrepogamedev\\assets\\scripts\\takingdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\takingdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|c:\\users\\ohara\\onedrive\\documents\\github\\localrepogamedev\\assets\\scripts\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|c:\\users\\ohara\\onedrive\\documents\\github\\localrepogamedev\\assets\\scripts\\restartgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\assets\\scripts\\restartgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\restartgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{290C0C43-E037-9EF4-F9A1-13DE84ED13F4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
+              "ToolTip": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAcwHYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T00:06:38.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "TakingDamage.cs",
+              "DocumentMoniker": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\TakingDamage.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TakingDamage.cs",
+              "ToolTip": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\TakingDamage.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TakingDamage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T00:04:08.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RestartGame.cs",
               "DocumentMoniker": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\RestartGame.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RestartGame.cs",
@@ -42,12 +72,11 @@
               "RelativeToolTip": "Assets\\Scripts\\RestartGame.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T20:41:51.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T20:41:51.062Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Flag.cs",
               "DocumentMoniker": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\Flag.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Flag.cs",
@@ -60,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
@@ -69,18 +98,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T19:23:04.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\ohara\\OneDrive\\Documents\\GitHub\\LocalRepoGameDev\\Assets\\Scripts\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T00:22:17.638Z"
             }
           ]
         }

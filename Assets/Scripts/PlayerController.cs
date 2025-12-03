@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip walk;
     public AudioClip jumpGRND;
     public AudioClip jumpAIR;
+    public AudioClip boing;
 
     // Private variables are used internally by the script.
     private Rigidbody2D rb;      // Reference to the Rigidbody2D component
@@ -105,6 +106,17 @@ public class PlayerController : MonoBehaviour
             {
                 animator.Play("player_fall"); // Otherwise play fall animation
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "BouncePad")
+        {
+            //Apply a stronger upward velocity when hitting the bounce pad
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2f);
+
+            //Play sound effect
+            audioPlayer.PlayOneShot(boing);
         }
     }
 
