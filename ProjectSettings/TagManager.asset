@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Damage
+  - BouncePad
   layers:
   - Default
   - TransparentFX
