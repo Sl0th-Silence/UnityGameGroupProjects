@@ -21,11 +21,12 @@ public class PlayerController : MonoBehaviour
 
     // Private variables are used internally by the script.
     private Rigidbody2D rb;      // Reference to the Rigidbody2D component
-    
+    private float lastDirection;
+    private SpriteRenderer spriteRenderer;
+
     //Bool for ground check
     private bool isGrounded;
     private bool doubleJump;
-    private float timer = 0.0f;
     private float SFXTimer = 0.0f;
     private Animator animator; // Reference to Animator component
     void Start()
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         // Grab the Rigidbody2D attached to the Player object once at the start.
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -40,14 +42,26 @@ public class PlayerController : MonoBehaviour
         // --- Horizontal movement ---
         // Get input from keyboard (A/D or Left/Right arrows).
         float moveInput = Input.GetAxis("Horizontal");
-        // Apply horizontal speed while keeping the current vertical velocity.
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        
+        //Flipping char
+        lastDirection = moveInput;
+        if(lastDirection > 0)
+        {
+            //Right
+            spriteRenderer.flipX = false;
+        }
+        else if(lastDirection < 0)
+        {
+            //Left
+            spriteRenderer.flipX = true;
+        }
+
+            // Apply horizontal speed while keeping the current vertical velocity.
+            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpForce);
-
-            timer = 0f;
 
             audioPlayer.PlayOneShot(jumpGRND);
         }

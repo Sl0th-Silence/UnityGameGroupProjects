@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PauseMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,32 +47,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T02:44:30.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PauseMenu.cs",
-              "ToolTip": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PauseMenu.cs*",
-              "RelativeToolTip": "Assets\\Scripts\\PauseMenu.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PauseMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PauseMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T02:22:55.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Coin.cs",
               "DocumentMoniker": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\Coin.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Coin.cs",
               "ToolTip": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\Coin.cs",
               "RelativeToolTip": "Assets\\Scripts\\Coin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T01:25:09.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
@@ -80,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlayerHealth.cs",
               "DocumentMoniker": "C:\\Users\\Jay_M\\Desktop\\SEMESTER3\\UnityGroupProject\\UnityGameGroupProjects\\UnityGameGroupProjects\\Assets\\Scripts\\PlayerHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerHealth.cs",
