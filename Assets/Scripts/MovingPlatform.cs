@@ -17,9 +17,14 @@ public class MovingPlatform : MonoBehaviour
         // Move the platform left/right each frame
         transform.Translate(Vector3.right * direction * speed * Time.deltaTime);
 
+        float offSet = transform.position.x - startPos.x;
+
         // If platform has moved the set distance from start
-        if (Mathf.Abs(transform.position.x - startPos.x) >= distance)
+        if (Mathf.Abs(offSet) >= distance)
         {
+            float clampedX = startPos.x + (distance * Mathf.Sign(offSet));
+            transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
+
             // Reverse direction (switch between left and right)
             direction *= -1;
         }
