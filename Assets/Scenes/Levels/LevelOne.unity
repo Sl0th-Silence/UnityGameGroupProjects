@@ -1537,6 +1537,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4098961496633946179, guid: 64c895a8a67363f4394c562d6a70d87b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -288
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098961496633946179, guid: 64c895a8a67363f4394c562d6a70d87b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 280
+      objectReference: {fileID: 0}
     - target: {fileID: 6927459470836325173, guid: 64c895a8a67363f4394c562d6a70d87b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
