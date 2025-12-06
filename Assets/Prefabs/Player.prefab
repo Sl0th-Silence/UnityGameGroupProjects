@@ -37,6 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 367757039316067293}
+  - {fileID: 9218272563197769981}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4858690576188192475
@@ -182,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54625f0dabe2c024fb5532836fc4977c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  coins: 0
   moveSpeed: 4
   jumpForce: 10
   groundCheck: {fileID: 367757039316067293}
@@ -193,6 +195,7 @@ MonoBehaviour:
   walk: {fileID: 8300000, guid: b79b530f8403c5048b222165aaef4f38, type: 3}
   jumpGRND: {fileID: 8300000, guid: 58fbc579f129cb142965547b9256ed73, type: 3}
   jumpAIR: {fileID: 8300000, guid: e9f7c8e6a7f1a8e46b1d90a3aa848a6e, type: 3}
+  boing: {fileID: 0}
 --- !u!95 &1862489729804004406
 Animator:
   serializedVersion: 7
@@ -328,8 +331,11 @@ MonoBehaviour:
   dmgSFX: {fileID: 8300000, guid: eff25594dd7da0b46bd74b9e4576190c, type: 3}
   deathSFX: {fileID: 8300000, guid: 9a31401f559164c42b4370933398a70c, type: 3}
   deathHitSFX: {fileID: 8300000, guid: 74f486cae43b47e4f997746da4123ecb, type: 3}
+  offMapDeath: {fileID: 8300000, guid: 413ece6e7f1d9a14cbe653df36166cd5, type: 3}
+  healthImage: {fileID: 0}
   health: 100
   damageAmount: 25
+  deathOverlay: {fileID: 8158218509549735407}
 --- !u!1 &5440198274507659869
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,3 +367,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9197183587010668779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4007222344863941532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9197183587010668779}
+    m_Modifications:
+    - target: {fileID: 5092256160302829171, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000014305115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8849877
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.46561444
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 55.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863779991760759216, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+      propertyPath: m_Name
+      value: Death Overlay
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+--- !u!212 &8158218509549735407 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5092256160302829171, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+  m_PrefabInstance: {fileID: 4007222344863941532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9218272563197769981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5220060592160537441, guid: eb1954f14b11a584eab99cb7ead1653b, type: 3}
+  m_PrefabInstance: {fileID: 4007222344863941532}
+  m_PrefabAsset: {fileID: 0}
