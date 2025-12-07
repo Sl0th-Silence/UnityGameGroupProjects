@@ -16,9 +16,15 @@ public class PlayerHealth : MonoBehaviour
     //so the sounds don't just spam (specifically falling off the map)
     private bool sfxPlayed = false;
 
+    //Spawn Position for reload
+    public Vector2 spawnLocation;
+
     //Healthbar Image
     public Image healthImage;
 
+    //Starting Lives
+    private int livesNum;
+    public Image[] livesImg;
 
     // Starting health value for the Player
     public int health = 100;
@@ -31,12 +37,27 @@ public class PlayerHealth : MonoBehaviour
 
     //this will be used to cover the screen upon death
     public SpriteRenderer deathOverlay;
+    //Death screen locations
+    private Vector3 overlayStartPos;
+    private Vector3 overlayStartScale;
+    private Quaternion overlayStartRot;
+    private bool overlayStartEnabled;
+    private int overlayStartOrder;
 
     private void Start()
     {
+        livesNum = 2;
         healthImage.enabled = true;
         // Get the SpriteRenderer component attached to the Player
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Store defaults for death screen
+        overlayStartPos = deathOverlay.transform.position;
+        overlayStartScale = deathOverlay.transform.localScale;
+        overlayStartRot = deathOverlay.transform.rotation;
+        overlayStartEnabled = deathOverlay.enabled;
+        overlayStartOrder = deathOverlay.sortingOrder;
+
     }
 
     //======== Update ========//
@@ -108,6 +129,27 @@ public class PlayerHealth : MonoBehaviour
     // Reload the scene when the Player dies
     private void Die()
     {
-        SceneManager.LoadScene("MainMenu");
+        // RESET OVERLAY HERE
+        deathOverlay.enabled = overlayStartEnabled;
+        deathOverlay.transform.position = overlayStartPos;
+        deathOverlay.transform.localScale = overlayStartScale;
+        deathOverlay.transform.rotation = overlayStartRot;
+        deathOverlay.sortingOrder = overlayStartOrder;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if(livesNum == 0)
+        {
+            //Game over
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            //Restart level
+            health = 100;
+            player.transform.position = spawnLocation;
+            livesImg[livesNum].enabled = false;
+            livesNum--;
+            sfxPlayed = false;
+        }
     }
 }
