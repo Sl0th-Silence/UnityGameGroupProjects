@@ -415,6 +415,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5875601673155649705, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
+      propertyPath: nextLevelName
+      value: LevelThree
+      objectReference: {fileID: 0}
+    - target: {fileID: 5875601673155649705, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
+      propertyPath: nextLevelValue
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6631042759522701071, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
       propertyPath: m_Name
       value: CanvasMain
@@ -426,10 +434,14 @@ PrefabInstance:
     - target: {fileID: 8037744399837810001, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1340092561}
+      objectReference: {fileID: 166856877}
     - target: {fileID: 8037744399837810001, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MainMenuButton
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037744399837810001, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NextLevel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8429125462284545470, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
       propertyPath: m_Pivot.x
@@ -534,6 +546,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9069037716645524099, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
   m_PrefabInstance: {fileID: 166856874}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &166856877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5875601673155649705, guid: 8ecab8c8c57d58045bd39504b3256d5a, type: 3}
+  m_PrefabInstance: {fileID: 166856874}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056d789aad34a054984e206999dbc8d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NextLevel
 --- !u!4 &191580393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7318945497535775816, guid: 08ba4074f44f6dd43857d1686eeee74d, type: 3}
@@ -2020,17 +2043,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2c62c987d34b464594a9eae01f4cbea, type: 3}
---- !u!114 &1340092561 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 301417394273985595, guid: 417369d4120e9ef4589400e98859948f, type: 3}
-  m_PrefabInstance: {fileID: 295932322}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce8a325e52a382d4080a6c57de1c51e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
 --- !u!4 &1342936181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8458629330617517154, guid: f0b52b58f88a1e04b8cbc5d1644e9058, type: 3}
