@@ -1,6 +1,8 @@
 using System.Threading;
 using UnityEngine;
 
+[RequireComponent(typeof(Coin))]
+[RequireComponent(typeof(PlayerHealth))]
 public class PlayerController : MonoBehaviour
 {
     public int coins = 0;
@@ -29,6 +31,11 @@ public class PlayerController : MonoBehaviour
     private bool doubleJump;
     private float SFXTimer = 0.0f;
     private Animator animator; // Reference to Animator component
+
+    //increasing jump height
+    private bool increaseJump = false;
+    private float increaseJumpTimer = 0.0f;
+
     void Start()
     {
         // Grab the Rigidbody2D attached to the Player object once at the start.
@@ -74,6 +81,18 @@ public class PlayerController : MonoBehaviour
             audioPlayer.PlayOneShot(jumpAIR);
         }
         setAnimation(moveInput);//Call setAnimation function every frame to check which animations should be played
+
+        //resets increased jump height 
+        if(increaseJump && increaseJumpTimer > 2.5f)
+        {
+            //has been more than 2.5 seconds
+            increaseJump = false;
+            jumpForce -= 3.5f;
+        }
+        else
+        {
+            increaseJumpTimer += Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
@@ -131,6 +150,41 @@ public class PlayerController : MonoBehaviour
 
             //Play sound effect
             audioPlayer.PlayOneShot(boing);
+        }
+        else if(collision.gameObject.tag == "Strawberry")
+        {
+            //strawberry allows an extra jump
+            doubleJump = true;
+
+            Destroy(collision.gameObject);
+        }
+        else if(collision.gameObject.tag == "Pear")
+        {
+            //pears give an extra life
+            PlayerHealth health = GetComponent<PlayerHealth>();
+            health.GrabbedFruit();
+
+            Destroy(collision.gameObject);
+        }
+        else if(collision.gameObject.tag == "Orange")
+        {
+            //oranges gives 15 coins
+            coins += 15;
+
+            Coin coinOBJ = GetComponent<Coin>();
+            coinOBJ.PowerUpCoins();
+
+            Destroy(collision.gameObject);
+        }
+        else if(collision.gameObject.tag == "Banana")
+        {
+            //banana increases jump force for a few seconds
+            jumpForce += 3.5f;
+
+            increaseJump = true;
+            increaseJumpTimer = 0.0f;
+
+            Destroy(collision.gameObject);
         }
     }
 

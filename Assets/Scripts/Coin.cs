@@ -21,4 +21,11 @@ public class Coin : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    //additional coins from powerups
+    public void PowerUpCoins()
+    {
+        PlayerController player = gameObject.GetComponent<PlayerController>();
+        coinText.text = player.coins.ToString();
+    }
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -150,6 +151,26 @@ public class PlayerHealth : MonoBehaviour
             livesImg[livesNum].enabled = false;
             livesNum--;
             sfxPlayed = false;
+        }
+    }
+
+    //increasing health when you pickup a pear
+    public void GrabbedFruit()
+    {
+        //adds an additional life
+        if(livesNum != 2)
+        {
+            livesNum++;
+            livesImg[livesNum].enabled = true;
+        }
+        else
+        {
+            //increase score if health is full
+            PlayerController player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+            player.coins += 10;
+
+            Coin coinOBJ = GetComponent<Coin>();
+            coinOBJ.PowerUpCoins();
         }
     }
 }
